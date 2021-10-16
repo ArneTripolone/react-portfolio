@@ -1,11 +1,15 @@
 import React from 'react'
 
+import Card from '../components/Card'
+
 import budgie from '../assets/images/budgie.png';
 import covidtracker from '../assets/images/covidtracker.png';
 import workscheduler from '../assets/images/workscheduler.png';
 import readmegenerator from '../assets/images/readmegenerator.png';
 import employeetracker from '../assets/images/employeetracker.png';
 import opviolinstore from '../assets/images/opviolinstore.png';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
 
 class Carousel extends React.Component {
 
@@ -65,10 +69,36 @@ class Carousel extends React.Component {
         }
     }
 
+    handleCardClick = (id, card) => {
+        let items = [...this.state.items];
+
+        items[id].selected = items[id].selected ? false : true;
+
+        items.forEach(item => {
+            if(item.id !== id) {
+                item.selected = false;
+            }
+        });
+
+        this.setState({
+            items
+        });
+    }
+
+    makeItems = (items) => {
+        return items.map(item => {
+            return <Card item={item} onClick={(e => this.handleCardClick(item.id, e))} key={item.id} />
+        })
+    }
+
     render() {
         return(
-            <p>Carousel Works!</p>
-        );
+            <Container fluid={true}>
+                <Row className="justify-content-around">
+                    {this.makeItems(this.state.items)}
+                </Row>
+            </Container>
+        )
     }
 
 }
