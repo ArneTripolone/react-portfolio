@@ -5,7 +5,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Navbar';
 
 import './App.css';
-
+import Footer from './components/Footer';
 
 class App extends React.Component {
 
@@ -36,29 +36,30 @@ class App extends React.Component {
     }
   }
   
+
   render() {
     return (
       <Router>
         <Container fluid={true}>
-
-          <Navbar className='border-bottom' bg='transparent' expand='lg'>
+          
+          <Navbar className="border-bottom" bg="transparent" expand="lg">
             <Navbar.Brand>Arne Tripolone</Navbar.Brand>
 
-            <Navbar.Toggle className='border-0' aria-controls='navbar-toggle' />
-            <Navbar.Collapse id='navbar-toggle'>
-              <Nav className='ml-auto'>
-                <Link className='nav-link' to='/'>Home</Link>
+            <Navbar.Toggle className="border-0" aria-controls="navbar-toggle" />
+            <Navbar.Collapse id="navbar-toggle">
+              <Nav className="ml-auto">
+              <Link className='nav-link' to='/'>Home</Link>
                 <Link className='nav-link' to='/about'>About Me</Link>
                 <Link className='nav-link' to='/work'>Work Examples</Link>
                 <Link className='nav-link' to='/contact'>Contact Me</Link>
               </Nav>
-            </Navbar.Collapse> 
-
+            </Navbar.Collapse>
           </Navbar>
+          <Footer />
 
         </Container>
       </Router>
-    )
+    );
   }
 }
 
