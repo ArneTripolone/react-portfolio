@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
+import Container from 'react-bootstrap/Container';
 import './App.css';
 
 class App extends React.Component {
@@ -34,7 +35,9 @@ class App extends React.Component {
   render() {
     return (
       <Router>
-      
+        <Container fluid={true}>
+          <p>Hi from React!</p>
+        </Container>
       </Router>
     )
   }
