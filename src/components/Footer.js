@@ -9,8 +9,8 @@ function Footer() {
         <footer className="mt-5">
             <Container fluid={true}>
                 <Row className="border-top justify-content-between p-3">
-                    <Col>
-                        This site was made by Arne Tripolone.
+                    <Col className="justify-content">
+                        This site was made by Arne Tripolone
                     </Col>
                 </Row>
             </Container>
