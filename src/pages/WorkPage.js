@@ -1,9 +1,13 @@
 import React from 'react';
+import Carousel from '../components/Carousel';
 
 function WorkPage(props) {
 
     return(
-        <p>WorkPage Works!</p>
+        <div>
+            <p>WorkPage Works!</p>
+            <Carousel />
+        </div>
     );
 
 }
