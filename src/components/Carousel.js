@@ -62,7 +62,7 @@ class Carousel extends React.Component {
                     title: 'OP Violin Shop',
                     subTitle: 'Final project, still in development!',
                     imgSrc: opviolinstore,
-                    link: 'https://github.com/ArneTripolone/react-portfolio',
+                    link: 'https://github.com/ArneTripolone/op-violin-shop',
                     selected: false
                 },
             ]
