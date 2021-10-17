@@ -5,7 +5,6 @@ function WorkPage(props) {
 
     return(
         <div>
-            <p>WorkPage Works!</p>
             <Carousel />
         </div>
     );
